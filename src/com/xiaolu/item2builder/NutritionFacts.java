@@ -8,7 +8,7 @@ public class NutritionFacts {
     private final int sodium;
     private final int carbohydrate;
 
-    public static class Builder {
+    public static class Builder implements com.xiaolu.item2builder.Builder<NutritionFacts> {
         private final int servingSize;
         private final int servings;
         private int calories = 0;
@@ -42,6 +42,7 @@ public class NutritionFacts {
             return this;
         }
 
+        @Override
         public NutritionFacts build() {
             return new NutritionFacts(this);
         }
