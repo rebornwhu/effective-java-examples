@@ -1,9 +1,6 @@
-package test.com.xiaolu.item30enum;
+package java.com.xiaolu.item30enum;
 
-import com.xiaolu.item30enum.PayrollDay;
 import org.junit.Test;
-import org.junit.Before;
-import org.junit.After;
 
 /**
  * PayrollDay Tester.

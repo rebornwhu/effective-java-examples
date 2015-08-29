@@ -1,4 +1,4 @@
-package com.xiaolu.item30enum;
+package main.java.com.xiaolu.item30enum;
 
 import java.util.HashMap;
 import java.util.Map;

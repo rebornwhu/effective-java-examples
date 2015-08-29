@@ -1,4 +1,4 @@
-package com.xiaolu;
+package main.java.com.xiaolu;
 
 public class Main {
 
