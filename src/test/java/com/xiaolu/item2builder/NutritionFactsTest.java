@@ -1,6 +1,5 @@
-package test.java.com.xiaolu.item2builder;
+package com.xiaolu.item2builder;
 
-import main.java.com.xiaolu.item2builder.NutritionFacts;
 import org.junit.Test;
 
 /**

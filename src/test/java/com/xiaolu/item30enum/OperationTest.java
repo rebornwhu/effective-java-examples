@@ -1,6 +1,5 @@
-package test.java.com.xiaolu.item30enum;
+package com.xiaolu.item30enum;
 
-import main.java.com.xiaolu.item30enum.Operation;
 import org.junit.Assert;
 import org.junit.Test;
 

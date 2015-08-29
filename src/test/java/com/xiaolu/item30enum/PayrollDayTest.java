@@ -1,4 +1,4 @@
-package java.com.xiaolu.item30enum;
+package com.xiaolu.item30enum;
 
 import org.junit.Test;
 
@@ -27,6 +27,4 @@ public class PayrollDayTest {
     public void testOvertimePay() throws Exception {
 
     }
-
-
 }

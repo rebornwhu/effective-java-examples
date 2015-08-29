@@ -1,4 +1,4 @@
-package main.java.com.xiaolu.item16composition;
+package com.xiaolu.item16composition;
 
 import java.util.Collection;
 import java.util.Set;
