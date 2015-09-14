@@ -19,6 +19,14 @@ public class SomeMethodsTest {
     }
 
     @Test
+    public void unionTest2() {
+        Set<Integer> integers = new HashSet<Integer>(Arrays.asList(1, 2, 3));
+        Set<Double> doubles = new HashSet<Double>(Arrays.asList(1.1, 2.2, 3.3));
+        Set<Number> numbers = SomeMethods.<Number> union(integers, doubles);
+        System.out.println(numbers);
+    }
+
+    @Test
     public void identityFunctionTest() throws Exception {
         String[] strings = { "jute", "hemp", "nylon" };
         SomeMethods.UnaryFunction<String> sameString = SomeMethods.identityFunction();
