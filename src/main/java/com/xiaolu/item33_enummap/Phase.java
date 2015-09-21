@@ -5,12 +5,13 @@ import java.util.Map;
 
 public enum Phase {
 
-    SOLID, LIQUID, GAS;
+    SOLID, LIQUID, GAS, PLASMA;
 
     public enum Transition {
         MELT(SOLID, LIQUID), FREEZE(LIQUID, SOLID),
         BOIL(LIQUID, GAS), CONDENSE(GAS, LIQUID),
-        SUBLIME(SOLID, GAS), DEPOSIT(GAS, SOLID);
+        SUBLIME(SOLID, GAS), DEPOSIT(GAS, SOLID),
+        IONIZE(GAS, PLASMA), DEIONIZE(PLASMA, GAS);
 
         private final Phase src;
         private final Phase dst;
@@ -26,6 +27,10 @@ public enum Phase {
             for (Phase p : Phase.values())
                 m.put(p, new EnumMap<Phase, Transition>(Phase.class));
 
+            /**
+             * src -> (dst -> tran)
+             * A src can transit to multiple dst, those transition form the end part of
+             */
             for (Transition trans : Transition.values())
                 m.get(trans.src).put(trans.dst, trans);
         }
