@@ -1,8 +1,6 @@
 package com.xiaolu.item17_document_inheritance;
 
 import org.junit.Test;
-import org.junit.Before;
-import org.junit.After;
 
 /**
  * Sub Tester.
