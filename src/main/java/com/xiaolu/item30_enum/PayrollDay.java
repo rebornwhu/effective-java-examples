@@ -1,4 +1,4 @@
-package com.xiaolu.item30enum;
+package com.xiaolu.item30_enum;
 
 public enum PayrollDay {
     MONDAY(PayType.WEEKDAY), TUESDAY(PayType.WEEKDAY), WEDNESDAY(PayType.WEEKDAY), THURSDAY(PayType.WEEKDAY),

@@ -1,4 +1,4 @@
-package com.xiaolu.item15mutability;
+package com.xiaolu.item15_mutability;
 
 public final class Complex {
     private final double re;

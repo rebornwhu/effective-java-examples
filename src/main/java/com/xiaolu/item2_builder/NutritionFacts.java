@@ -1,4 +1,4 @@
-package com.xiaolu.item2builder;
+package com.xiaolu.item2_builder;
 
 public class NutritionFacts {
     private final int servingSize;
@@ -8,7 +8,7 @@ public class NutritionFacts {
     private final int sodium;
     private final int carbohydrate;
 
-    public static class Builder implements com.xiaolu.item2builder.Builder<NutritionFacts> {
+    public static class Builder implements com.xiaolu.item2_builder.Builder<NutritionFacts> {
         private final int servingSize;
         private final int servings;
         private int calories = 0;

@@ -1,4 +1,4 @@
-package com.xiaolu.item2builder;
+package com.xiaolu.item2_builder;
 
 import org.junit.Test;
 
