@@ -4,15 +4,16 @@ import java.util.HashMap;
 
 public class Favorites {
 
-    HashMap<Object, Object> favorites = new HashMap<Object, Object>();
+    HashMap<Class<?>, Object> favorites = new HashMap<>();
 
     public <T> void putFavorite(Class<T> type, T instance) {
+        if (type == null)
+            throw new NullPointerException("Type is null");
         favorites.put(type, instance);
     }
 
     public <T> T getFavorite(Class<T> type) {
-        @SuppressWarnings("unchecked") T instance = (T) favorites.get(type);
-        return instance;
+        return type.cast(favorites.get(type));
     }
 
 }
