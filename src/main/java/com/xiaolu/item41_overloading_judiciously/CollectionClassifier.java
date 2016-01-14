@@ -1,8 +1,7 @@
 package com.xiaolu.item41_overloading_judiciously;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
+import java.math.BigInteger;
+import java.util.*;
 
 public class CollectionClassifier {
 
@@ -15,6 +14,15 @@ public class CollectionClassifier {
     }
 
     public static String classify(Collection<?> c) {
-        return "Unknown Collection";
+        return c instanceof Set ? "Set" : c instanceof List ? "List" : "Unknown Collection";
+    }
+
+    public static void main(String[] args) {
+        Collection<?>[] collections = {
+                new HashSet<String>(), new ArrayList<BigInteger>(),
+                new HashMap<String, String>().values()};
+
+        for (Collection<?> c : collections)
+            System.out.println(classify(c));
     }
 }
