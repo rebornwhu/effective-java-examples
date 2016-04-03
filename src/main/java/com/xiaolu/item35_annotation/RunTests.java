@@ -9,7 +9,7 @@ public class RunTests {
 
         Class testClass = Class.forName(args[0]);
         for (Method m : testClass.getDeclaredMethods()) {
-            if (m.isAnnotationPresent(Test.class)) {
+            if (m.isAnnotationPresent(MyTest.class)) {
                 tests++;
                 try {
                     m.invoke(null);

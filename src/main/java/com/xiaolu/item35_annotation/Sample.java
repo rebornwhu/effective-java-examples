@@ -2,14 +2,14 @@ package com.xiaolu.item35_annotation;
 
 public class Sample {
 
-    @Test
+    @MyTest
     public static void m1() {
     }
 
     public static void m2() {
     }
 
-    @Test
+    @MyTest
     public static void m3() {
         throw new RuntimeException("Boom");
     }
@@ -17,11 +17,11 @@ public class Sample {
     public static void m4() {
     }
 
-    @Test
+    @MyTest
     public void m5() {
     }
 
-    @Test
+    @MyTest
     public static void m7() {
         throw new RuntimeException("Crash");
     }
