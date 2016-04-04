@@ -28,9 +28,19 @@ public class ObservableSet<E> extends ForwardingSet<E> {
     }
 
     private void notifyElementAdded(E element) {
-        synchronized (observers) {
+        /*synchronized (observers) {
             for (SetObserver<E> observer : observers)
                 observer.added(this, element);
+        }*/
+
+        // Alien method moved outside of synchronized block - open calls
+        List<SetObserver<E>> snapshot = null;
+        synchronized (observers) {
+            snapshot = new ArrayList<>(observers);
+        }
+
+        for (SetObserver<E> observer : snapshot) {
+            observer.added(this, element);
         }
     }
 
