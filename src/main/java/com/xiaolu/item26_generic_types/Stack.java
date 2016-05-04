@@ -1,5 +1,6 @@
 package com.xiaolu.item26_generic_types;
 
+import java.util.Collection;
 import java.util.EmptyStackException;
 
 @SuppressWarnings("unused")
@@ -31,8 +32,17 @@ public class Stack<E> {
         return result;
     }
 
-    public void pushAll(Iterable<E> src) {
+    public boolean isEmpty() {
+        return elements.length == 0;
+    }
+
+    public void pushAll(Iterable<? extends E> src) {
         for (E e : src)
             push(e);
+    }
+
+    public void popAll(Collection<? super E> dst) {
+        while (!isEmpty())
+            dst.add(pop());
     }
 }
